@@ -1,0 +1,5 @@
+{
+  "name": "Rankify - AI Mock Test Scanner",
+  "description": "Upload any JEE/NEET mock test PDF. Our AI visually scans the document, extracts questions, solves them, and creates an instant interactive quiz for you to practice.",
+  "requestFramePermissions": []
+}
