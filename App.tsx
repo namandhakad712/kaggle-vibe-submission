@@ -115,13 +115,20 @@ const App: React.FC = () => {
            </div>
         )}
 
-        {appState === AppState.QUIZ && quizData && (
-          <QuizSection 
-            quizData={quizData} 
-            pdfBase64={pdfBase64}
-            onComplete={handleQuizComplete}
-            onCancel={handleRetry}
-          />
+        {appState === AppState.QUIZ && (
+          quizData ? (
+             <QuizSection 
+               quizData={quizData} 
+               pdfBase64={pdfBase64}
+               onComplete={handleQuizComplete}
+               onCancel={handleRetry}
+             />
+          ) : (
+            // Fallback if quizData is null but state is QUIZ (should not happen, but prevents black screen)
+            <div className="flex-1 flex items-center justify-center text-rose-500">
+               Error: Quiz data missing. <button onClick={handleRetry} className="underline ml-2">Retry</button>
+            </div>
+          )
         )}
 
         {appState === AppState.RESULTS && quizData && (

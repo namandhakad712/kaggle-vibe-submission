@@ -10,7 +10,7 @@ import rehypeKatex from 'rehype-katex';
 import gsap from 'gsap';
 
 // Set worker source for PDF.js - MUST MATCH the version in index.html import map
-pdfjsLib.GlobalWorkerOptions.workerSrc = `https://esm.sh/pdfjs-dist@5.4.449/build/pdf.worker.min.mjs`;
+pdfjsLib.GlobalWorkerOptions.workerSrc = `https://esm.sh/pdfjs-dist@4.8.69/build/pdf.worker.min.mjs`;
 
 interface QuizSectionProps {
   quizData: QuizData;
